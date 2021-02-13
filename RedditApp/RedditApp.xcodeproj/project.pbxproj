@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		74EC77B225D81F0A00669289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC77B125D81F0A00669289 /* AppDelegate.swift */; };
 		74EC77B425D81F0A00669289 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC77B325D81F0A00669289 /* SceneDelegate.swift */; };
-		74EC77B625D81F0A00669289 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC77B525D81F0A00669289 /* ViewController.swift */; };
+		74EC77B625D81F0A00669289 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC77B525D81F0A00669289 /* FeedViewController.swift */; };
 		74EC77B925D81F0A00669289 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74EC77B725D81F0A00669289 /* Main.storyboard */; };
 		74EC77BB25D81F0B00669289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74EC77BA25D81F0B00669289 /* Assets.xcassets */; };
 		74EC77BE25D81F0B00669289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74EC77BC25D81F0B00669289 /* LaunchScreen.storyboard */; };
+		74EC77E825D863B000669289 /* SinglePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC77E625D863B000669289 /* SinglePostViewController.swift */; };
+		74EC77E925D863B000669289 /* SinglePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74EC77E725D863B000669289 /* SinglePostViewController.xib */; };
+		74EC77EF25D8655F00669289 /* FeedViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC77EE25D8655F00669289 /* FeedViewPresenter.swift */; };
+		74EC77F225D865DF00669289 /* SinglePostViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC77F125D865DF00669289 /* SinglePostViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		74EC77AE25D81F0A00669289 /* RedditApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EC77B125D81F0A00669289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74EC77B325D81F0A00669289 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		74EC77B525D81F0A00669289 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74EC77B525D81F0A00669289 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		74EC77B825D81F0A00669289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74EC77BA25D81F0B00669289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74EC77BD25D81F0B00669289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74EC77BF25D81F0B00669289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74EC77E625D863B000669289 /* SinglePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePostViewController.swift; sourceTree = "<group>"; };
+		74EC77E725D863B000669289 /* SinglePostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SinglePostViewController.xib; sourceTree = "<group>"; };
+		74EC77EE25D8655F00669289 /* FeedViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewPresenter.swift; sourceTree = "<group>"; };
+		74EC77F125D865DF00669289 /* SinglePostViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePostViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,107 @@
 		74EC77B025D81F0A00669289 /* RedditApp */ = {
 			isa = PBXGroup;
 			children = (
+				74EC77BF25D81F0B00669289 /* Info.plist */,
 				74EC77B125D81F0A00669289 /* AppDelegate.swift */,
 				74EC77B325D81F0A00669289 /* SceneDelegate.swift */,
-				74EC77B525D81F0A00669289 /* ViewController.swift */,
-				74EC77B725D81F0A00669289 /* Main.storyboard */,
-				74EC77BA25D81F0B00669289 /* Assets.xcassets */,
 				74EC77BC25D81F0B00669289 /* LaunchScreen.storyboard */,
-				74EC77BF25D81F0B00669289 /* Info.plist */,
+				74EC77F425D8664400669289 /* Resources */,
+				74EC77DA25D8361100669289 /* Scenes */,
 			);
 			path = RedditApp;
+			sourceTree = "<group>";
+		};
+		74EC77DA25D8361100669289 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				74EC77E025D846BA00669289 /* FeedScene */,
+				74EC77E225D8632E00669289 /* SinglePostScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		74EC77DD25D8469B00669289 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				74EC77EE25D8655F00669289 /* FeedViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		74EC77DE25D8469E00669289 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74EC77B525D81F0A00669289 /* FeedViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74EC77DF25D846A100669289 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74EC77E025D846BA00669289 /* FeedScene */ = {
+			isa = PBXGroup;
+			children = (
+				74EC77B725D81F0A00669289 /* Main.storyboard */,
+				74EC77DF25D846A100669289 /* Model */,
+				74EC77DE25D8469E00669289 /* View */,
+				74EC77DD25D8469B00669289 /* Presenter */,
+			);
+			path = FeedScene;
+			sourceTree = "<group>";
+		};
+		74EC77E225D8632E00669289 /* SinglePostScene */ = {
+			isa = PBXGroup;
+			children = (
+				74EC77E525D8634900669289 /* view */,
+				74EC77E425D8634200669289 /* Model */,
+				74EC77E325D8634000669289 /* Presenter */,
+			);
+			path = SinglePostScene;
+			sourceTree = "<group>";
+		};
+		74EC77E325D8634000669289 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				74EC77F125D865DF00669289 /* SinglePostViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		74EC77E425D8634200669289 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74EC77E525D8634900669289 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				74EC77EC25D863E500669289 /* Xib's */,
+				74EC77E625D863B000669289 /* SinglePostViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		74EC77EC25D863E500669289 /* Xib's */ = {
+			isa = PBXGroup;
+			children = (
+				74EC77E725D863B000669289 /* SinglePostViewController.xib */,
+			);
+			path = "Xib's";
+			sourceTree = "<group>";
+		};
+		74EC77F425D8664400669289 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				74EC77BA25D81F0B00669289 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74EC77E925D863B000669289 /* SinglePostViewController.xib in Resources */,
 				74EC77BE25D81F0B00669289 /* LaunchScreen.storyboard in Resources */,
 				74EC77BB25D81F0B00669289 /* Assets.xcassets in Resources */,
 				74EC77B925D81F0A00669289 /* Main.storyboard in Resources */,
@@ -137,9 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74EC77B625D81F0A00669289 /* ViewController.swift in Sources */,
+				74EC77E825D863B000669289 /* SinglePostViewController.swift in Sources */,
+				74EC77B625D81F0A00669289 /* FeedViewController.swift in Sources */,
+				74EC77EF25D8655F00669289 /* FeedViewPresenter.swift in Sources */,
 				74EC77B225D81F0A00669289 /* AppDelegate.swift in Sources */,
 				74EC77B425D81F0A00669289 /* SceneDelegate.swift in Sources */,
+				74EC77F225D865DF00669289 /* SinglePostViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
